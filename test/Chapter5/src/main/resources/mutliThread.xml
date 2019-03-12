@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="param" parallel="methods" thread-count="3">
+
+    <!--
+    tests级别：不同的test tag下的用例可以在不同的线程下执行
+    相同的test tag 下的用例只能在同一个线程中去执行
+    classs级别：相同的class tag 下的用例在同一个线程下执行
+    methods级别：所有用例都可以在不同的线程下去执行
+    thread-count:代表了最大的并发线程数
+    xml中无法设置线程池
+    -->
+    <test name="par">
+        <classes name="cla">
+            <class name="com.jmeter.testng.multiThreads.MultiThreadonXml"/>
+        </classes>
+
+
+    </test>
+    <test name="pars">
+        <classes name="cl">
+            <class name="com.jmeter.testng.multiThreads.MultiThreadonXml"/>
+        </classes>
+
+
+    </test>
+</suite>

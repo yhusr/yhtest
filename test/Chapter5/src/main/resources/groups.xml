@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="grouptest">
+    <test name="group">
+        <classes>
+            <class name="com.jmeter.testng.Groups.GroupClass1"/>
+            <class name="com.jmeter.testng.Groups.GroupClass2"/>
+            <class name="com.jmeter.testng.Groups.GroupClass3"/>
+        </classes>
+    </test>
+
+    <test name="group1">
+        <!--分组执行测试-->
+        <groups>
+            <run>
+                <include name="student"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.jmeter.testng.Groups.GroupClass1"/>
+            <class name="com.jmeter.testng.Groups.GroupClass2"/>
+            <class name="com.jmeter.testng.Groups.GroupClass3"/>
+        </classes>
+    </test>
+</suite>
