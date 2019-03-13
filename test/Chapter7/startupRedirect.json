@@ -1,0 +1,27 @@
+[
+  {
+    "description": "这是一个重定向请求",
+    "request": {
+        "uri": "/redirect"
+    },
+    "redirectTo": "https://www.baidu.com"
+  },
+  {
+    "description": "这是一个重定向到自己网址的请求",
+    "request": {
+      "uri": "/new"
+    },
+    "redirectTo": "/new/path"
+
+  },
+  {
+    "description": "自己的网址",
+    "request": {
+      "uri": "/new/path"
+    },
+    "response": {
+        "text": "success to me"
+    }
+  }
+
+]
