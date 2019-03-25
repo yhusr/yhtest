@@ -1,0 +1,18 @@
+server:
+  port: 8902
+logging:
+  path: logs
+  file: mylog.log
+spring:
+  application:
+    name: myTest
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.197:3306/mytest
+    username: yuanhao
+    password: 123456
+
+mybatis:
+  type-aliases-package: com.test.model
+  mapper-locations:
+    - mapper/*
