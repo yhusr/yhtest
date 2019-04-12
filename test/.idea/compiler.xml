@@ -9,6 +9,7 @@
         <module name="Chapter10" />
         <module name="Chapter11" />
         <module name="Chapter12" />
+        <module name="Chapter13" />
         <module name="Chapter5" />
         <module name="Chapter6" />
         <module name="Chapter9" />
@@ -18,10 +19,16 @@
       <module name="Chapter10" target="8" />
       <module name="Chapter11" target="1.6" />
       <module name="Chapter12" target="1.6" />
+      <module name="Chapter13" target="1.8" />
       <module name="Chapter5" target="1.5" />
       <module name="Chapter6" target="6" />
       <module name="Chapter9" target="1.6" />
       <module name="test" target="1.6" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Chapter13" options="-extdirs E:\yhtest\test\Chapter13/lib" />
+    </option>
   </component>
 </project>
