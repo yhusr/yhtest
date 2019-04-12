@@ -9,9 +9,14 @@ import java.io.IOException;
 import java.io.Reader;
 
 public class DatabaseUtil {
-    public static SqlSession getSqlSession() throws IOException {
+    public static SqlSession getSqlSession(){
         //获取配置的资源文件
-        Reader reader = Resources.getResourceAsReader("databaseConfig.xml");
+        Reader reader = null;
+        try {
+            reader = Resources.getResourceAsReader("databaseConfig.xml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(reader);
         //sqlSession 就是能够执行配置文件中的sql语句

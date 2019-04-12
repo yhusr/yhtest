@@ -5,17 +5,17 @@ import lombok.Data;
 @Data
 public class User {
     private int id;
-    private String name;
-    private int age;
+    private String userName;
+    private String age;
     private String denger;
     private String password;
-    private int permission;
-    private int isDelete;
+    private String permission;
+    private String isDelete;
 @Override
     public String toString(){
         return (
                 "{id:"+id+","+
-                "name:"+name+","+
+                "userName:"+userName+","+
                 "age:"+age+","+
                 "denger:"+denger+","+
                 "password:"+password+","+

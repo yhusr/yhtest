@@ -4,11 +4,11 @@ import lombok.Data;
 
 @Data
 public class AddUserCase {
-    private String name;
+    private String userName;
     private String password;
     private String denger;
-    private int age;
-    private int permission;
-    private int isDelete;
+    private String age;
+    private String permission;
+    private String isDelete;
     private String expected;
 }

@@ -8,8 +8,8 @@ public class UpdateUserInfoCase {
     private int userId;
     private String userName;
     private String denger;
-    private int age;
-    private int permission;
-    private int isDelete;
+    private String age;
+    private String permission;
+    private String isDelete;
     private String expected;
 }
