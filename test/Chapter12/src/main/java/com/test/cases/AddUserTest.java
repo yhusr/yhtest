@@ -25,12 +25,12 @@ public class AddUserTest {
         System.out.println("期望值是："+addUserCase.getExpected());
         System.out.println(TestConfig.addUserUrl);
 
-        Thread.sleep(3000);
         //发请求，获取结果
-
         String result = getResult(addUserCase);
         //验证返回结果
-        Thread.sleep(4000);
+        sqlSession.commit(true);
+        Thread.sleep(2000);
+
         User user = sqlSession.selectOne("addInfo",addUserCase);
         System.out.println(user.toString());
         Assert.assertEquals(addUserCase.getExpected(),result);
