@@ -31,7 +31,7 @@ public class LoginTest {
         TestConfig.defaultHttpClient = new DefaultHttpClient();
     }
     @Test(groups = "loginTrue",description = "用户登陆成功接口测试")
-    public void loginTrue() throws IOException {
+    public void loginTrue() throws IOException, InterruptedException {
         SqlSession session = DatabaseUtil.getSqlSession();
         LoginCase loginCase= session.selectOne("loginCase",1);
         System.out.println(loginCase.toString());
@@ -39,6 +39,8 @@ public class LoginTest {
 
         //发送请求
         String result = getResult(loginCase);
+        Thread.sleep(3000);
+
         //验证结果
         Assert.assertEquals(loginCase.getExpected(),result);
     }
