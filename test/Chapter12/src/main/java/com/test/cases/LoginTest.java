@@ -57,7 +57,7 @@ public class LoginTest {
         post.setEntity(entity);
         HttpResponse response= TestConfig.defaultHttpClient.execute(post);
         String result = EntityUtils.toString(response.getEntity(),"utf-8");
-        System.out.println(result);
+        System.out.println("获取的cookie值"+result);
         //获取响应中的cookies并赋值到store中
         TestConfig.store = TestConfig.defaultHttpClient.getCookieStore();
         System.out.println(TestConfig.store);
