@@ -27,8 +27,9 @@ public class AddUserTest {
 
         //发请求，获取结果
         String result = getResult(addUserCase);
-        //验证返回结果
+        //强制刷新数据库
         sqlSession.commit(true);
+        //验证返回结果
         Thread.sleep(2000);
 
         User user = sqlSession.selectOne("addInfo",addUserCase);
