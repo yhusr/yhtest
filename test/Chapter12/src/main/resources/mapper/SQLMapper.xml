@@ -21,7 +21,7 @@
     </select>
 
     <!--添加用户信息-->
-    <select id="addInfo" parameterType="com.test.model.AddUserCase" resultType="com.User">
+    <select id="addInfo" parameterType="com.test.model.AddUserCase" resultType="com.test.model.User">
         select * from user where
          userName = #{userName}
         and password=#{password}
